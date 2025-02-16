@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<title>HMS</title>
+<style>
+  /* Reset some default styles */
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+  
+  /* Basic styling */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    background-color: #fff; /* Updated background color */
+    color: #333; /* Updated text color */
+    padding: 15px 20px; /* Increased padding for more height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-logo {
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333; /* Text color */
+  }
+  
+  .navbar-btn {
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+	background-color: green;
+	border: 1px solid green;
+	border-radius: 20px; /* Adjust the value to control the roundness */
+	transition: background-color 0.3s, color 0.3s; /* Add a smooth transition */
+}
+
+/* Change button appearance on hover */
+.navbar-btn:hover {
+  background-color: white;
+  color: green;
+}
+  
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Hero image section */
+  .hero {
+    background-image: url('hospital.jpg');
+    background-size: cover;
+	background-position: center;
+    text-align: center;
+    padding: 300px 0;
+    color: black;
+  }
+  
+  .hero-btn {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: 2px solid green;
+    border-radius: 20px;
+    font-size: 20px;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  .hero-btn:hover {
+  background-color: white;
+  color: green;
+}
+  
+  /* Features section */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .feature-container {
+    flex-basis: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  
+  .feature {
+    text-align: center;
+    padding: 20px;
+    background-color: #FBFBE4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    flex: 1;
+    max-width: calc(33.33% - 20px);
+    margin: 5px;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin: 0 auto 15px;
+  }
+  
+  /* Customer reviews section */
+  /* Apply styling to the review section */
+.review-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  border-radius: 25px;
+  margin-right: 70px;
+  margin-left: 70px;
+  background-color: #D1FFBD; /* Light grey with transparency */
+}
+
+.reviews {
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  max-width: 400px;
+  width: 80%;
+  background-color: white;
+}
+
+.review {
+  display: none; /* Initially hide all reviews */
+}
+
+.review.active {
+  display: block; /* Display active review */
+}
+
+  @keyframes slideReviews {
+  0%, 20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25%, 100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.review {
+  display: none;
+  animation: slideReviews 3s infinite; /* Total time including display and sliding */
+}
+
+.review:nth-child(2) {
+  animation-delay: 1s; /* Delay for second review to start after 10s */
+}
+
+.review:nth-child(3) {
+  animation-delay: 2s; /* Delay for third review to start after 20s */
+}
+.special-section {
+  /* Styles for the new section */
+  height: 30vh;
+  margin-right: 70px;
+  margin-left: 70px;
+  text-align: center;
+}
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="navbar-logo">Hospital Management System</a>
+    <a href="#special-section"><button class="navbar-btn">Get Started &#8594;</button></a>
+  </div>
+  <div class="hero">
+    <h1 style="font-size: 50px;">Welcome to Our Hospital</h1>
+	<br>
+    <p style="font-size: 30px;">Providing Best in-class Excellent Healthcare Services</p>
+	<br>
+    <a href="#special-section"><button class="hero-btn">Explore &#8594;</button></a>
+	
+  </div>
+  <br><br>
+  <h1 style="font-size: 30px; text-align: center;">Why Use Our System &#63;</h1>
+  <div class="container">
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon" style="background-image: url('feature-icon-1.png');"></div>
+        <h3>Appointment Scheduling</h3>
+        <p>Book appointments online with ease.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background-image: url('feature-icon-2.png');"></div>
+        <h3>Medical Records</h3>
+        <p>Access your medical history and reports.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background-image: url('feature-icon-3.png');"></div>
+        <h3>Prescription Management</h3>
+        <p>Receive and manage prescriptions digitally.</p>
+      </div>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon" style="background-image: url('feature-icon-4.png');"></div>
+        <h3>Virtual Consultations</h3>
+        <p>Connect with doctors remotely for consultations.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background-image: url('feature-icon-5.png');"></div>
+        <h3>Health Tracking</h3>
+        <p>Monitor your health metrics and progress.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" style="background-image: url('feature-icon-6.png');"></div>
+        <h3>Payment Options</h3>
+        <p>Secure and flexible payment methods.</p>
+      </div>
+    </div>
+	<br><br>
+	<h1 style="font-size: 30px; text-align: center;">Testimonials, What Our Customers Are Saying</h1><br>
+	<section class="review-section">
+    <div class="reviews">
+      <div class="review active">
+        <p>"The hospital's services are top-notch. Highly recommended!"</p>
+        <p>- John Doe</p>
+      </div>
+      <div class="review">
+        <p>"I'm impressed by the efficient and friendly staff."</p>
+        <p>- Jane Smith</p>
+      </div>
+      <div class="review">
+        <p>"The hospital's management system has made my life easier."</p>
+        <p>- Robert Johnson</p>
+      </div>
+    </div>
+  </div>
+  </section>
+  <br>
+  <section class="special-section">
+  <div id="special-section">
+    <h1 style="font-size: 30px; text-align: center;">Show the world, How it's done</h1>
+    <br>
+    <a href="http://dbproject.pythonanywhere.com/"><button class="hero-btn">Let's Go &#8594;</button></a>
+	</div>
+  </section>
+  <div class="footer">© 2023 Hospital Management System. All rights reserved.</div>
+</body>
+</html>
